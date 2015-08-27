@@ -1,0 +1,20 @@
+<div class = "current-list">
+
+
+<div class = "song admin-song" ng-repeat="song in songs">
+	<div class = "delete" ng-click ="deleteSong(song, $index)"> Close out song </div>
+	{{ song.title }} - {{ song.artist}}
+
+</div>
+	
+<div class = "new-song">
+	<div>
+	Title: <input type = "text" ng-model="title"/>
+	</div>
+	<div>
+	Artist: <input type = "text" ng-model="artist"/>
+	</div>
+	<div>
+	Url: <input type = "text" ng-model="url"/>
+	</div>
+	<button ng-click

@@ -1,0 +1,25 @@
+<div  class ="list" ng-controller = "ListController">
+
+
+<div class = "landing-container">
+	<div ng-repeat ="song in songs">
+		<div class = "title"> 
+		{{ song.title }} 
+		</div>
+			<div class = "artist"> {{song.artist }}</div>
+	</div>
+
+
+
+	<div class = "song-container" ng-controller = "SongController">
+			<div ng-show="song.title">
+				Title: <span ng-bind ="song.title"></span>
+				Artist: <span ng-bind ="song.artist"></span>
+			</div>
+
+	<button ng-click ="playPause()">
+	{{ (isPlaying ? "Pause" : "Play") }}
+	</button>
+
+	</div>
+</div>
